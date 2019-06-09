@@ -13,12 +13,16 @@ class PagesController extends Controller
 {
     public function index()
     {
-        $users = User::orderBy('id', 'DESC');
+
         $photos = Photos::orderBy('id', 'DESC')->paginate(15);
         $events = Events::orderBy('id', 'DESC')->paginate(10);
-        $albums = Albums::orderBy('id', 'DESC')->paginate(1);
+        $albums = Albums::orderBy('id', 'DESC')->paginate(3);
+        $latest = Albums::orderBy('id', 'DESC')->paginate(1);
         $upevents = Events::orderBy('id', 'DESC')->paginate(1);
+        $users = User::orderBy('id', 'DESC')->get()->only(1,2,3,4);
 
-        return view('index',compact('albums','upevents','events','photos','users'));
+
+        return view('index',compact('albums','latest','events','photos','users'));
     }
+
 }

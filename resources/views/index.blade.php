@@ -306,7 +306,7 @@
       </div><!-- section-title -->
       <div class="row">
 
-    @foreach ($albums as $album)
+    @foreach ($latest as $album)
         <div class="col-lg-4 offset-md-0 offset-lg-0 col-sm-5">
           <div class="js-latest-album-item">
             <div class="js-latest-album-thumbnails text-center">

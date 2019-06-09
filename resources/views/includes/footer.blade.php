@@ -36,7 +36,7 @@
             <img src="assets/images/igfeed/3.jpg" alt="Ig Feed thumbnail">
             <a href="#" class="btn btn-alt js-igfeed-btn">@sajibdesigns</a>
           </div>
-         
+
           <div class="js-feed-thumbnail">
             <img src="{{ asset('assets/images/igfeed/5.jpg')}}" alt="Ig Feed thumbnail">
             <a href="#" class="btn btn-alt js-igfeed-btn">@sajibdesigns</a>
@@ -81,28 +81,24 @@
             <div class="js-footer-widget">
               <h5>Recent Post</h5>
               <ul>
+
+                @foreach ($users as $user)
+
                 <li class="js-primary-border-bottom-gradient">
-                  <div class="js-widget-recent-post mb-3 pb-3">
-                    <div class="js-widget-post-thumbnail">
-                      <a href="#"><img src=" {{asset('assets/images/blog/footer-widget-thumbnail.jpg')}} " alt="Thumbnail"></a>
+                    <div class="js-widget-recent-post mb-3 pb-3">
+                      <div class="js-widget-post-thumbnail">
+                        <a href="#"><img src=" {{asset('assets/images/blog/footer-widget-thumbnail.jpg')}} " alt="Thumbnail"></a>
+                      </div>
+                      <div class="js-widget-post--content">
+                        <p><a href="#">Lorem ipsum dolor sit, consectetur adipisicing elit. Rerum amet.</a></p>
+                        <span class="js-post-date">20 June  2018</span>
+                      </div>
                     </div>
-                    <div class="js-widget-post--content">
-                      <p><a href="#">Lorem ipsum dolor sit, consectetur adipisicing elit. Rerum amet.</a></p>
-                      <span class="js-post-date">20 June  2018</span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="js-widget-recent-post mb-0 pb-0">
-                    <div class="js-widget-post-thumbnail">
-                      <a href="#"><img src=" {{asset('assets/images/blog/footer-widget-thumbnail2.jpg')}} " alt="Thumbnail"></a>
-                    </div>
-                    <div class="js-widget-post--content">
-                      <p><a href="#">Lorem ipsum dolor sit, consectetur adipisicing elit. Rerum amet.</a></p>
-                      <span class="js-post-date">20 June  2018</span>
-                    </div>
-                  </div>
-                </li>
+                  </li>
+
+                @endforeach
+
+
               </ul>
             </div><!-- js-footer-widget -->
           </div><!-- col end -->
