@@ -1,16 +1,16 @@
- 
 
-// Google maps pin tooltip  
+
+// Google maps pin tooltip
     var markers = [
         {
             "lat": '34.027973',
            "lng": '-118.242217',
-          
-            "description": 'Pixelthemez <br/><a target="_blank" href="https://themeforest.net/user/pixelthemez/portfolio">Get it now</a>'
+
+            "description": 'Nairobi <br/><a target="_blank" href="#>Get it now</a>'
         }
     ];
-    
-    
+
+
     // Google maps main api
     window.onload = function () {
         var mapOptions = {
@@ -22,7 +22,7 @@
             zoomControl:true,
             streetViewControl: false,
             mapTypeControl: false,
- 
+
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
             var infoWindow = new google.maps.InfoWindow();
