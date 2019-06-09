@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'PagesController@index')->name('index');
 Route::get('/albums', function () {
     return view('albums/index');
 });

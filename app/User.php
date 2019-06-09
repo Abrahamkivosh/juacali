@@ -15,9 +15,10 @@ class User extends Authenticatable  implements MustVerifyEmail
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+        protected $guarded = [];
+    // protected $fillable = [
+    //     'name','phone', 'email', 'password',
+    // ];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -36,4 +37,21 @@ class User extends Authenticatable  implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function blogs()
+    {
+        return $this->hasMany(Blog::class);
+    }
+
+    public function comments()
+    {
+        return $this->morphMany('App\Comment', 'commentable');
+    }
+
+
+    public function roles()
+    {
+        return $this->belongsToMany('App\Role', 'role_user_table', 'user_id', 'role_id');
+    }
+
 }
