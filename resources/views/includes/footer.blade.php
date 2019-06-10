@@ -82,7 +82,7 @@
               <h5>Recent Post</h5>
               <ul>
 
-                @foreach ($users as $user)
+
 
                 <li class="js-primary-border-bottom-gradient">
                     <div class="js-widget-recent-post mb-3 pb-3">
@@ -96,7 +96,7 @@
                     </div>
                   </li>
 
-                @endforeach
+
 
 
               </ul>
