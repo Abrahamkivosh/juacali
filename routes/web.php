@@ -12,12 +12,11 @@
 */
 
 Route::get('/', 'PagesController@index')->name('index');
-Route::get('/albums', function () {
-    return view('albums/index');
-});
-Route::get('/albums/show', function () {
-    return view('albums/show');
-});
+
+Route::resource('/albums', 'AlbumsController');
+
+
+
 Route::get('/events', function () {
     return view('events/index');
 });
@@ -25,12 +24,10 @@ Route::get('/events/show', function () {
     return view('albums/show');
 });
 
-Route::get('/photo-gallary', function () {
-    return view('pages.photos');
-});
-Route::get('/video-gallary', function () {
-    return view('pages.videos');
-});
+;
+Route::get('/photo-gallary', 'PagesController@photos')->name('photos');
+Route::get('/video-gallary', 'PagesController@videos')->name('videos');
+
 Route::get('/shop', function () {
     return view('shop.products');
 });

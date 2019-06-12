@@ -8,6 +8,7 @@ use App\Albums;
 use App\Musics;
 use App\Events;
 use App\Photos;
+use App\Videos;
 
 class PagesController extends Controller
 {
@@ -23,6 +24,18 @@ class PagesController extends Controller
 
 
         return view('index',compact('albums','latest','events','photos','users'));
+    }
+    public function photos(){
+        $photos = Photos::all();
+
+        return view('pages.photos',compact('photos'));
+    }
+
+    public function videos(){
+        $videos = Videos::all();
+        //dd($videos);
+
+        return view('pages.videos',compact('videos'));
     }
 
 }

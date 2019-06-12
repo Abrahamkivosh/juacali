@@ -14,7 +14,9 @@ class AlbumsController extends Controller
      */
     public function index()
     {
-        //
+        $albums = Albums::all();
+
+       return view('albums/index',compact('albums'));
     }
 
     /**
@@ -24,7 +26,7 @@ class AlbumsController extends Controller
      */
     public function create()
     {
-        //
+        return 'Route for creating new album';
     }
 
     /**
@@ -44,9 +46,12 @@ class AlbumsController extends Controller
      * @param  \App\Albums  $albums
      * @return \Illuminate\Http\Response
      */
-    public function show(Albums $albums)
+    public function show($id)
     {
-        //
+       // $album = Albums::findOrfail($albums->id);
+        $album = Albums::find($id);
+
+        return view('albums.show',compact('album'));
     }
 
     /**
@@ -57,7 +62,9 @@ class AlbumsController extends Controller
      */
     public function edit(Albums $albums)
     {
-        //
+        $album = Albums::find($albums->id);
+        dd($album);
+        return "Hello world";
     }
 
     /**

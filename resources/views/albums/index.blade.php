@@ -5,7 +5,7 @@
       <div class="row d-flex align-items-center">
         <div class="col-md-12 text-center has-color">
           <div class="js-breadcrumb-content">
-            <h2>Blog Default With Sidebar</h2>
+            <h2>View all albums</h2>
           </div>
         </div>
       </div>
@@ -20,134 +20,35 @@
         <span class="primary-color">iTunes</span> or <span class="primary-color">Google Play</span></p>
       </div><!-- section-title -->
       <div class="row">
-        <div class="col-lg-3 col-sm-5">
-          <div class="js-single-album-item text-center">
-            <div class="js-album-thumbnail">
-              <img src="{{ asset('assets/images/album/thumbnail1.jpeg') }} " alt="thumbnail1">
-              <div class="js-popup-album-cover">
-                <a href="#"><i class="fa fa-plus"></i></a>
-              </div>
-              <div class="album-cd">
-                <img src="{{ asset('assets/images/album/cd.png') }}" alt="Album CD">
-              </div><!-- Album CD -->
-              <ul class="app-button list-inline"><!-- app-button -->
-                <li><a href="#"><i class="fa fa-play"></i><p><span>Available on</span>App Store</p></a></li>
-                <li><a href="#"><i class="fa fa-apple"></i><p><span>Available on</span>App Store</p></a></li>
-              </ul><!-- App-button -->
-            </div>
-              <div class="album-content">
-                <h4 class="text-uppercase"><a href="album-single.html">Alone</a></h4>
-                <span class="primary-color">(2019)</span>
-              </div>
-          </div><!-- js-single-album-item -->
-        </div><!-- col-lg -->
-        <div class="col-lg-3 offset-lg-1 col-sm-5 offset-sm-1">
-          <div class="js-single-album-item text-center">
-            <div class="js-album-thumbnail">
-              <img src="{{ asset('assets/images/album/thumbnail2.jpeg') }}" alt="thumbnail1">
-              <div class="js-popup-album-cover">
-                <a href="#"><i class="fa fa-plus"></i></a>
-              </div>
-              <div class="album-cd">
-                <img src="{{ asset('assets/images/album/cd.jpeg') }}" alt="Album CD">
-              </div><!-- Album CD -->
-              <ul class="app-button list-inline"><!-- app-button -->
-                <li><a href="#"><i class="fa fa-play"></i><p><span>Available on</span>App Store</p></a></li>
-                <li><a href="#"><i class="fa fa-apple"></i><p><span>Available on</span>App Store</p></a></li>
-              </ul><!-- App-button -->
-            </div>
-              <div class="album-content">
-                <h4 class="text-uppercase"><a href="album-single.html">Without You</a></h4>
-                <span class="primary-color">(2018)</span>
-              </div>
-          </div><!-- js-single-album-item -->
-        </div><!-- col-lg -->
-        <div class="col-lg-3 offset-lg-1 col-sm-5">
-          <div class="js-single-album-item text-center">
-            <div class="js-album-thumbnail">
-              <img src="{{ asset('assets/images/album/thumbnail3.jpeg') }}" alt="thumbnail1">
-              <div class="js-popup-album-cover">
-                <a href="#"><i class="fa fa-plus"></i></a>
-              </div>
-              <div class="album-cd">
-                <img src="{{asset('assets/images/album/cd.png') }}" alt="Album CD">
-              </div><!-- Album CD -->
-              <ul class="app-button list-inline"><!-- app-button -->
-                <li><a href="#"><i class="fa fa-play"></i><p><span>Available on</span>App Store</p></a></li>
-                <li><a href="#"><i class="fa fa-apple"></i><p><span>Available on</span>App Store</p></a></li>
-              </ul><!-- App-button -->
-            </div>
-              <div class="album-content">
-                <h4 class="text-uppercase"><a href="album-single.html">Party Night</a></h4>
-                <span class="primary-color">(2017)</span>
-              </div>
-          </div><!-- js-single-album-item -->
-        </div><!-- col-lg -->
-      </div><!-- row -->
-      <div class="row">
-        <div class="col-lg-3 col-sm-5">
-          <div class="js-single-album-item text-center">
-            <div class="js-album-thumbnail">
-              <img src="{{ asset('assets/images/album/thumbnail1.jpeg') }}" alt="thumbnail1">
-              <div class="js-popup-album-cover">
-                <a href="#"><i class="fa fa-plus"></i></a>
-              </div>
-              <div class="album-cd">
-                <img src="{{ asset('assets/images/album/cd.png') }}" alt="Album CD">
-              </div><!-- Album CD -->
-              <ul class="app-button list-inline"><!-- app-button -->
-                <li><a href="#"><i class="fa fa-play"></i><p><span>Available on</span>App Store</p></a></li>
-                <li><a href="#"><i class="fa fa-apple"></i><p><span>Available on</span>App Store</p></a></li>
-              </ul><!-- App-button -->
-            </div>
-              <div class="album-content">
-                <h4 class="text-uppercase"><a href="album-single.html">Alone</a></h4>
-                <span class="primary-color">(2019)</span>
-              </div>
-          </div><!-- js-single-album-item -->
-        </div><!-- col-lg -->
+
+
+        @foreach ($albums as $album)
         <div class="col-lg-3 offset-lg-1  col-sm-5 offset-sm-1">
-          <div class="js-single-album-item text-center">
-            <div class="js-album-thumbnail">
-              <img src="{{ asset('assets/images/album/thumbnail2.jpeg') }}" alt="thumbnail1">
-              <div class="js-popup-album-cover">
-                <a href="#"><i class="fa fa-plus"></i></a>
+            <div class="js-single-album-item text-center">
+              <div class="js-album-thumbnail">
+                <img src="{{ asset('assets/images/album/thumbnail2.jpeg') }}" alt="thumbnail1">
+                <div class="js-popup-album-cover">
+                  <a href="/albums/{{ $album->id }}"><i class="fa fa-plus"></i></a>
+                </div>
+                <div class="album-cd">
+                  <img src="{{ asset('assets/images/album/cd.png') }}" alt="Album CD">
+                </div><!-- Album CD -->
+                <ul class="app-button list-inline"><!-- app-button -->
+                  <li><a href="#"><i class="fa fa-play"></i><p><span>Available on</span>App Store</p></a></li>
+                  <li><a href="#"><i class="fa fa-apple"></i><p><span>Available on</span>App Store</p></a></li>
+                </ul><!-- App-button -->
               </div>
-              <div class="album-cd">
-                <img src="{{ asset('assets/images/album/cd.png') }}" alt="Album CD">
-              </div><!-- Album CD -->
-              <ul class="app-button list-inline"><!-- app-button -->
-                <li><a href="#"><i class="fa fa-play"></i><p><span>Available on</span>App Store</p></a></li>
-                <li><a href="#"><i class="fa fa-apple"></i><p><span>Available on</span>App Store</p></a></li>
-              </ul><!-- App-button -->
-            </div>
-              <div class="album-content">
-                <h4 class="text-uppercase"><a href="album-single.html">Without You</a></h4>
-                <span class="primary-color">(2018)</span>
-              </div>
-          </div><!-- js-single-album-item -->
-        </div><!-- col-lg -->
-        <div class="col-lg-3 offset-lg-1 col-sm-5">
-          <div class="js-single-album-item text-center">
-            <div class="js-album-thumbnail">
-              <img src="{{ asset('assets/images/album/thumbnail3.jpeg') }}" alt="thumbnail1">
-              <div class="js-popup-album-cover">
-                <a href="#"><i class="fa fa-plus"></i></a>
-              </div>
-              <div class="album-cd">
-                <img src="{{ asset('assets/images/album/cd.png') }}" alt="Album CD">
-              </div><!-- Album CD -->
-              <ul class="app-button list-inline"><!-- app-button -->
-                <li><a href="#"><i class="fa fa-play"></i><p><span>Available on</span>App Store</p></a></li>
-                <li><a href="#"><i class="fa fa-apple"></i><p><span>Available on</span>App Store</p></a></li>
-              </ul><!-- App-button -->
-            </div>
-              <div class="album-content">
-                <h4 class="text-uppercase"><a href="album-single.html">Party Night</a></h4>
-                <span class="primary-color">(2017)</span>
-              </div>
-          </div><!-- js-single-album-item -->
-        </div><!-- col-lg -->
+                <div class="album-content">
+                  <h4 class="text-uppercase"><a href="album-single.html">{{ $album->name }}</a></h4>
+                  <span class="primary-color">({{ $album->produced }})</span>
+                </div>
+            </div><!-- js-single-album-item -->
+          </div>
+
+        @endforeach
+
+        <!-- col-lg -->
+
       </div><!-- row -->
     </div><!-- container -->
   </section><!-- Album Section End -->
