@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Category;
 use App\Products;
 use Illuminate\Http\Request;
 
@@ -12,9 +12,13 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-        //
+        $categories = Category::orderBy('id', 'DESC')->simplepaginate(1);
+        //$products = Products::orderBy('id', 'DESC')->paginate(15);
+
+        return view('shop.products',compact('categories'));
     }
 
     /**

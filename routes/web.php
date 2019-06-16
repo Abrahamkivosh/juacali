@@ -28,23 +28,18 @@ Route::get('/events/show', function () {
 Route::get('/photo-gallary', 'PagesController@photos')->name('photos');
 Route::get('/video-gallary', 'PagesController@videos')->name('videos');
 
-Route::get('/shop', function () {
-    return view('shop.products');
-});
-Route::get('/cart', function () {
-    return view('shop.cart');
-});
+Route::resource('/shop', 'ProductsController');
 
-Route::get('/checkout', function () {
-    return view('shop.checkout');
-});
+Route::get('/cart','OrdersController@cart');
+Route::get('add-to-cart/{id}', 'OrdersController@addToCart');
 
-Route::get('/blog', function () {
-    return view('blog.blog');
-});
-Route::get('/blog/show', function () {
-    return view('blog.show');
-});
+Route::patch('update-cart', 'OrdersController@update');
+
+Route::delete('remove-from-cart', 'OrdersController@remove');
+Route::get('/checkout', 'OrdersController@checkout');
+
+Route::resource('blog', 'BlogController');
+
 Route::get('/detials', function () {
     return view('bio');
 });

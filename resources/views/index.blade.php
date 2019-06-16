@@ -141,7 +141,9 @@
 
 
       <div class="row">
-          {{ $albums->links() }}
+         <div class=" pull-right">
+                {{ $albums->links() }}
+         </div>
     @foreach ($albums as $album)
         <div class="col-lg-3 col-sm-5  ">
           <div class="js-single-album-item text-center">

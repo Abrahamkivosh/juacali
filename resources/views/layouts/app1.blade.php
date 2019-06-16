@@ -15,7 +15,8 @@
 
   <link rel="shortcut icon" type="image/png" href="{{ asset('/favicon.ico') }}">
   <!-- Place favicon.ico in the root directory -->
-
+<!-- message -->
+<link rel="stylesheet" href="{{ asset('css/message.css') }}">
   <!-- animate -->
   <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
   <!-- font-awesome -->
@@ -79,13 +80,13 @@
               </ul></li>
             <li><a href="#">GALLERY</a>
               <ul>
-                <li><a href="/photo-gallary">Photo Gallary</a></li>  
-                <li><a href="/video-gallary">Video Gallary</a></li>     
+                <li><a href="/photo-gallary">Photo Gallary</a></li>
+                <li><a href="/video-gallary">Video Gallary</a></li>
               </ul>
             </li>
             <li><a href="/detials">Singer</a>
               <ul>
-               
+
                 <li><a href="/detials">Artist Details</a></li>
               </ul>
             </li>
@@ -100,7 +101,7 @@
             <li><a href="/blog">BLOG</a>
               <ul>
                 <li><a href="/blog">Blog Page</a></li>
-                
+
               </ul>
             </li>
             <li><a href="/contact">CONTACT</a></li>
@@ -120,8 +121,12 @@
 
 
 
-@yield('content')
+@include('partials.errors')
+@include('partials.success')
+{{--  @include('partials.comments')  --}}
 
+@yield('content')
+@yield('scripts')
   @include('includes.footer')
 
 

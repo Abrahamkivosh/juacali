@@ -13,10 +13,10 @@ class BlogSeederTable extends Seeder
      */
     public function run()
     {
-        factory(Blog::class, 10)->create()->each(function ($blog) {
-            $blog->comments()->save(factory(Comment::class)->make());
-        });
-        // factory(Blog::class, 10)->create();
-        // factory(Comment::class, 10)->create();
+       // factory(Blog::class, 10)->create()->each(function ($blog) {
+        //    $blog->comments()->save(factory(Comment::class)->make());
+       // });
+         factory(Blog::class, 20)->create();
+         factory(Comment::class, 30)->create();
     }
 }

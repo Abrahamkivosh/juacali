@@ -14,7 +14,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+        $blogs = Blog::orderBy('id', 'DESC')->simplepaginate(15);
+        return view('blog.blog',compact('blogs'));
     }
 
     /**

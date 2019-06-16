@@ -108,15 +108,15 @@
               <ul class="js-contact-info">
                 <li><i class="fa fa-map-marker"></i><p><span>ADDRESS:</span>55 Green Tower, Street Name New York City, USA</p></li>
                 <li><i class="fa fa-phone"></i><p><span>Phone:</span> +88 0191 444 137</p></li>
-                <li><i class="fa fa-envelope"></i><p><span>Email: </span>nfo@themerocket.com</p></li>
-                <li><i class="fa fa-globe"></i><p><span>WEbsite: </span>themerocket.com</p></li>
+                <li><i class="fa fa-envelope"></i><p><span>Email: </span>info@juacali.com</p></li>
+                <li><i class="fa fa-globe"></i><p><span>WEbsite: </span>juacali.com</p></li>
               </ul>
             </div>
           </div><!-- col end -->
         </div><!-- row end -->
         <div class="row">
           <div class="col-lg-12 text-center">
-            <p class="js-copyright">© Copyright 2018 <a href="../../../../themeforest.net/user/pixelthemez/portfolio.html" target="_blank" class="primary-color">ThemeRocket</a> All Rights Reserved.</p>
+            <p class="js-copyright">© Copyright {{ date('Y') }} <a href="/" target="_blank" class="primary-color">JuaCali</a> All Rights Reserved.</p>
           </div>
         </div><!-- row end -->
       </div><!-- container -->

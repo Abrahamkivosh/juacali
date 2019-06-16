@@ -26,8 +26,8 @@
                 <h4>check as a guest or register</h4>
                 <span>Register with us for future convenience:</span>
                 <ul>
-                  <li><a href="#"><img class="mr-2" src="assets/images/user.png" alt="user">Checkt as guest</a></li>
-                  <li><a href="#"><img class="mr-2" src="assets/images/check.png" alt="Check">Register</a></li>
+                  {{--  <li><a href="#"><img class="mr-2" src="assets/images/user.png" alt="user">Checkt as guest</a></li>  --}}
+                  <li><a href="/register"><img class="mr-2" src="{{ asset('assets/images/check.png') }}" alt="Check">Register</a></li>
                 </ul>
                 <h4>register and save time</h4>
                 <span>Register with us for future convenience:</span>
@@ -38,22 +38,21 @@
             <div class="col-lg-6">
               <div class="js-checkout-form">
                 <h4>already registed ?</h4>
-                <span>Please log in below :</span>
-                <form action="https://themeforest.net/user/pixelthemez/portfolio">
-                  <label>email address <span class="primary-color">*</span></label>
-                  <input type="email" required="">
-                  <label>password <span class="primary-color">*</span></label>
-                  <input type="password">
+                <span>Please proceed to login page :</span>
+
+
                   <div class="w-100 mt-50">
-                    <a href="#">Forgot Your Password ?</a>
-                    <button type="submit" class="btn btn-primary no-border-radius float-right">log in</button> 
+                    <a href="//password/reset">Forgot Your Password ?</a>
+                   <a href="/login"> <button type="submit" class="btn btn-primary no-border-radius float-right">Log in Page</button></a>
                   </div>
-                </form><!-- form -->
+               <!-- form -->
+
+
               </div><!-- js-checkout-form -->
             </div><!-- col-lg-6 -->
-          </div><!-- row -->  
-        </div><!-- js-product-checkout -->  
-        
+          </div><!-- row -->
+        </div><!-- js-product-checkout -->
+
         <div class="js-checkout-accordion">
           <div id="accordion">
             <div class="card">
@@ -80,7 +79,7 @@
               </div> <!-- card-header -->
               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                 <div class="card-body">
-                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it</p> 
+                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it</p>
                   <p>squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably havent heard of them accusamus labore sustainable VHS.</p>
                 </div>
               </div>
@@ -95,7 +94,7 @@
               </div> <!-- card-header -->
               <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                 <div class="card-body">
-                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,</p> 
+                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,</p>
                   <p>craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven not heard of them accusamus labore sustainable VHS.</p>
                 </div>
               </div>
@@ -115,14 +114,14 @@
                 </div>
               </div>
             </div><!-- Card Close-->
-          </div> <!-- Accordion -->         
-        </div><!-- js-checkout-accordion --> 
+          </div> <!-- Accordion -->
+        </div><!-- js-checkout-accordion -->
       </div><!-- border -->
     </div><!--container -->
   </section><!-- js-product-details-area -->
- 
+
    <span class="scrolltop"><i class="pe-7s-angle-up"></i></span>
-   
+
 
 
 @endsection
